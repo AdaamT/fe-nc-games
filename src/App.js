@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./styling/App.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Home from "./components/home";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
         <Header />
       </header>
 
-      <Routes></Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
 
       <footer className="App-footer">
         <Footer />
