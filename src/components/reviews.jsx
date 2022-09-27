@@ -2,13 +2,18 @@ import { useEffect, useState } from "react";
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     fetch("https://fe-nc-games.herokuapp.com/api/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data.reviews);
+        setIsLoading(false);
       });
   }, []);
+  if (isLoading) {
+    return <p>Loading ...</p>;
+  }
 
   return (
     <div>
