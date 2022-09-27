@@ -2,20 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +16,42 @@
   color: #61dafb;
 }
 
+.App-Nav-Home {
+  margin: 1em;
+  color: forestgreen;
+}
+.App-Nav-reviews {
+  margin: 1em;
+  color: forestgreen;
+}
+.App-Nav-categories {
+  margin: 1em;
+  color: forestgreen;
+}
+.App-Nav-profile {
+  margin: 1em;
+  color: forestgreen;
+}
+.App-img {
+  border: 1em;
+  min-height: 5cm;
+  max-height: 20cm;
+  width: 10cm;
+}
+
+.App-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #6cf;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +60,9 @@
     transform: rotate(360deg);
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */

@@ -4,6 +4,8 @@ import "./styling/App.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Home from "./components/home";
+import NavBar from "./components/navbar";
+import AllReviews from "./components/reviews";
 
 function App() {
   return (
@@ -12,8 +14,11 @@ function App() {
         <Header />
       </header>
 
+      <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/reviews" element={<AllReviews />} />
       </Routes>
 
       <footer className="App-footer">
