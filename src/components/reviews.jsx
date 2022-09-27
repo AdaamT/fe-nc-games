@@ -22,16 +22,18 @@ const AllReviews = () => {
       <ul>
         {reviews.map((review) => {
           return (
-            <li key={review.review_id}>
-              <p>Title: {review.title}p</p>
+            <li className="App-reviews-list" key={review.review_id}>
+              <p>Title: {review.title}</p>
               <p>Category: {review.category}</p>
               <img
                 className="App-img"
                 src={review.review_img_url}
-                alt="image of review"
+                alt="review"
               ></img>
               <p>Votes: {review.votes}</p>
               <p>Comment Count: {review.comment_count}</p>
+              <br />
+              <br />
             </li>
           );
         })}

@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { Route, Routes } from "react-router-dom";
 import "./styling/App.css";
 import Header from "./components/header";
@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Home from "./components/home";
 import NavBar from "./components/navbar";
 import AllReviews from "./components/reviews";
+import AllCategories from "./components/categories";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<AllReviews />} />
+        <Route path="/categories" element={<AllCategories />} />
       </Routes>
 
       <footer className="App-footer">
