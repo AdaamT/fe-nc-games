@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllCategories = () => {
   const [categories, setCategories] = useState([]);
@@ -7,7 +8,6 @@ const AllCategories = () => {
     fetch("https://fe-nc-games.herokuapp.com/api/categories")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.categories);
         setCategories(data.categories);
         setIsLoading(false);
       });
@@ -24,7 +24,7 @@ const AllCategories = () => {
         {categories.map((category) => {
           return (
             <li className="App-category-list" key={category.slug}>
-              <button>{category.slug}</button>
+              <Link to={`/categories/${category.slug}`}>{category.slug}</Link>
               <p>{category.description}</p>
             </li>
           );
