@@ -34,7 +34,7 @@ const AllReviews = () => {
     <div>
       <br />
       <h2>Reviews!!</h2>
-      {ReviewsByCategory()}
+      <ReviewsByCategory />
       <br />
       <ul>
         {reviews.map((review) => {
