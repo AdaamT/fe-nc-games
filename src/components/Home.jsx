@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div>
+    <div className="App-Home">
       <h2>Homebase</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel leo

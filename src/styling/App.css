@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   margin-bottom: 60px;
+  background-color: plum;
 }
 
 .App-header {
@@ -11,6 +12,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-Home {
+  background-color: yellow;
 }
 
 .App-link {
@@ -55,12 +60,11 @@
 }
 
 .App-reviews-list {
-  border-radius: 1em;
-  border-width: 1px;
-  border-color: black;
   color: blue;
-  padding: 0;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
 }
 
 /* .App-logo {

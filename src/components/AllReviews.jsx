@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ReviewCard from "./ReviewCard";
 import ReviewsByCategory from "./ReviewsByCategory";
 
 const AllReviews = () => {
@@ -38,21 +39,7 @@ const AllReviews = () => {
       <br />
       <ul>
         {reviews.map((review) => {
-          return (
-            <li className="App-reviews-list" key={review.review_id}>
-              <p>Title: {review.title}</p>
-              <p>Category: {review.category}</p>
-              <img
-                className="App-img"
-                src={review.review_img_url}
-                alt="review"
-              ></img>
-              <p>Votes: {review.votes}</p>
-              <p>Comment Count: {review.comment_count}</p>
-              <br />
-              <br />
-            </li>
-          );
+          return <ReviewCard review={review} />;
         })}
       </ul>
     </div>
