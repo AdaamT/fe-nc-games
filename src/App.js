@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { Route, Routes } from "react-router-dom";
 import "./styling/App.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Home from "./components/home";
-import NavBar from "./components/navbar";
-import AllReviews from "./components/reviews";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import NavBar from "./components/Navbar";
+import AllReviews from "./components/AllReviews";
+import AllCategories from "./components/AllCategories";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<AllReviews />} />
+        <Route path="/categories" element={<AllCategories />} />
+        <Route path="/categories/:category_slug" element={<AllReviews />} />
       </Routes>
 
       <footer className="App-footer">
