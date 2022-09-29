@@ -9,7 +9,6 @@ const ReviewByReviewId = () => {
     fetch(`https://fe-nc-games.herokuapp.com/api/reviews/${review_id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.review);
         setReview(data.review);
         setIsLoading(false);
       });
@@ -20,7 +19,16 @@ const ReviewByReviewId = () => {
 
   return (
     <div>
-      <h3>Here is review{review_id}</h3>
+      <br />
+      <h3>Here is Review {review_id}</h3>
+      <p>Title: {review.title}</p>
+      <p>Category: {review.category}</p>
+      <img className="App-img" src={review.review_img_url} alt="game" />
+      <p>Votes: {review.votes}</p>
+      <p>Comments: {review.comment_count}</p>
+      <p>Designer: {review.designer}</p>
+      <p>Owner: {review.owner}</p>
+      <p>Created: {review.created_at}</p>
     </div>
   );
 };
