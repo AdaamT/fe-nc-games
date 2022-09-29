@@ -10,6 +10,7 @@ const ReviewByReviewId = () => {
       .then((res) => res.json())
       .then((data) => {
         setReview(data.review);
+        console.log(data.review);
         setIsLoading(false);
       });
   }, []);
@@ -25,6 +26,7 @@ const ReviewByReviewId = () => {
       <p>Category: {review.category}</p>
       <img className="App-img" src={review.review_img_url} alt="game" />
       <p>Votes: {review.votes}</p>
+      <p>{review.review_body}</p>
       <p>Comments: {review.comment_count}</p>
       <p>Designer: {review.designer}</p>
       <p>Owner: {review.owner}</p>
