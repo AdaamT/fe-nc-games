@@ -39,7 +39,7 @@ const AllReviews = () => {
       <br />
       <ul>
         {reviews.map((review) => {
-          return <ReviewCard review={review} />;
+          return <ReviewCard review={review} key={review.review_id} />;
         })}
       </ul>
     </div>
