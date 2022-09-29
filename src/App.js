@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import NavBar from "./components/Navbar";
 import AllReviews from "./components/AllReviews";
 import AllCategories from "./components/AllCategories";
+import ReviewByReviewId from "./components/ReviewByReviewId";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/reviews" element={<AllReviews />} />
         <Route path="/categories" element={<AllCategories />} />
         <Route path="/categories/:category_slug" element={<AllReviews />} />
+        <Route path="/reviews/:review_id" element={<ReviewByReviewId />} />
       </Routes>
 
       <footer className="App-footer">

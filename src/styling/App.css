@@ -2,6 +2,7 @@
   text-align: center;
   margin-bottom: 60px;
   background-color: plum;
+  min-height: 100vh;
 }
 
 .App-header {
@@ -15,7 +16,15 @@
 }
 
 .App-Home {
-  background-color: yellow;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.homebase {
+  margin-bottom: 25vh;
 }
 
 .App-link {
@@ -50,7 +59,7 @@
   bottom: 0;
   width: 100%;
   height: 40px;
-  background: #6cf;
+  background: grey;
 }
 
 .App-category-list {
