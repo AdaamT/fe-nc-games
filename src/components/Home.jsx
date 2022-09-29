@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div className="App-Home">
-      <h2>Homebase</h2>
+      <h2 className="homebase">Homebase</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel leo
         lobortis, sollicitudin arcu sed, iaculis libero. Sed ut mollis sapien,
