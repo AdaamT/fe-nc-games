@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ChangeVoteCount from "./ChangeVoteCount";
 
 const ReviewByReviewId = () => {
   const [review, setReview] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { review_id } = useParams();
+  const [voteCount, setVoteCount] = useState(0);
   useEffect(() => {
     fetch(`https://fe-nc-games.herokuapp.com/api/reviews/${review_id}`)
       .then((res) => res.json())
       .then((data) => {
         setReview(data.review);
-        console.log(data.review);
         setIsLoading(false);
       });
   }, []);
+
   if (isLoading) {
     return <p>Loading ...</p>;
   }
@@ -25,7 +27,12 @@ const ReviewByReviewId = () => {
       <p>Title: {review.title}</p>
       <p>Category: {review.category}</p>
       <img className="App-img" src={review.review_img_url} alt="game" />
-      <p>Votes: {review.votes}</p>
+      <p>Votes: {review.votes + voteCount}</p>
+      <ChangeVoteCount
+        review_id={review_id}
+        voteCount={voteCount}
+        setVoteCount={setVoteCount}
+      />
       <p>{review.review_body}</p>
       <p>Comments: {review.comment_count}</p>
       <p>Designer: {review.designer}</p>
@@ -34,5 +41,4 @@ const ReviewByReviewId = () => {
     </div>
   );
 };
-
 export default ReviewByReviewId;
