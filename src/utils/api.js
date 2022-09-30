@@ -5,10 +5,15 @@ const gamesApi = axios.create({
 });
 
 export const patchReviewVote = (review_id, voteChange) => {
-  console.log(voteChange);
   return gamesApi
     .patch(`/reviews/${review_id}`, { inc_votes: voteChange })
     .then((res) => {
       return res.data;
     });
+};
+
+export const getCommentsByReviewId = (review_id) => {
+  return gamesApi.get(`/reviews/${review_id}/comments`).then((res) => {
+    return res.data;
+  });
 };
