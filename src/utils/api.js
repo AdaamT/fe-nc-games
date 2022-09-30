@@ -13,7 +13,7 @@ export const patchReviewVote = (review_id, voteChange) => {
 };
 
 export const getCommentsByReviewId = (review_id) => {
-  return gamesApi.get(`/reviews/${review_id}/comments`).then((res) => {
-    return res.data;
+  return gamesApi.get(`/reviews/${review_id}/comments`).then((data) => {
+    return data.json;
   });
 };

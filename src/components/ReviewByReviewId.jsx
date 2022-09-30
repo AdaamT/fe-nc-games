@@ -34,7 +34,9 @@ const ReviewByReviewId = () => {
         setVoteCount={setVoteCount}
       />
       <p>{review.review_body}</p>
-      <p>Comments: {review.comment_count}</p>
+      <Link to="{`/reviews/${review.review_id}/comments`}">
+        <p>Comments: {review.comment_count}</p>
+      </Link>
       <p>Designer: {review.designer}</p>
       <p>Owner: {review.owner}</p>
       <p>Created: {review.created_at}</p>
