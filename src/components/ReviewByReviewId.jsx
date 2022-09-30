@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { patchReviewVote } from "../utils/api";
+import ChangeVoteCount from "./ChangeVoteCount";
 
 const ReviewByReviewId = () => {
   const [review, setReview] = useState([]);
@@ -16,24 +16,6 @@ const ReviewByReviewId = () => {
       });
   }, []);
 
-  function handleUpVote() {
-    setVoteCount(voteCount + 1);
-    patchReviewVote(review.review_id, 1)
-      .then(() => {})
-      .catch(() => {
-        setVoteCount(voteCount - 1);
-      });
-  }
-
-  function handleDownVote() {
-    setVoteCount(voteCount - 1);
-    patchReviewVote(review.review_id, -1)
-      .then(() => {})
-      .catch(() => {
-        setVoteCount(voteCount + 1);
-      });
-  }
-
   if (isLoading) {
     return <p>Loading ...</p>;
   }
@@ -45,15 +27,12 @@ const ReviewByReviewId = () => {
       <p>Title: {review.title}</p>
       <p>Category: {review.category}</p>
       <img className="App-img" src={review.review_img_url} alt="game" />
-      <p>
-        Votes: {review.votes + voteCount}{" "}
-        <button onClick={handleUpVote} disabled={voteCount > 0}>
-          +1
-        </button>
-        <button onClick={handleDownVote} disabled={voteCount < 0}>
-          -1
-        </button>
-      </p>
+      <p>Votes: {review.votes + voteCount}</p>
+      <ChangeVoteCount
+        review_id={review_id}
+        voteCount={voteCount}
+        setVoteCount={setVoteCount}
+      />
       <p>{review.review_body}</p>
       <p>Comments: {review.comment_count}</p>
       <p>Designer: {review.designer}</p>
