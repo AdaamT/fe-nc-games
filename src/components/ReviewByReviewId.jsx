@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ChangeVoteCount from "./ChangeVoteCount";
 
 const ReviewByReviewId = () => {
@@ -34,7 +35,7 @@ const ReviewByReviewId = () => {
         setVoteCount={setVoteCount}
       />
       <p>{review.review_body}</p>
-      <Link to="{`/reviews/${review.review_id}/comments`}">
+      <Link to={`/reviews/${review.review_id}/comments`}>
         <p>Comments: {review.comment_count}</p>
       </Link>
       <p>Designer: {review.designer}</p>
