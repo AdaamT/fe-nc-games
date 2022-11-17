@@ -76,6 +76,14 @@
   border-radius: 5px;
 }
 
+.App-review-comments {
+  text-align: left;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

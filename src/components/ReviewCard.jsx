@@ -10,7 +10,7 @@ const ReviewCard = (props) => {
       </Link>
       <p>Category: {review.category}</p>
       <img className="App-img" src={review.review_img_url} alt="review"></img>
-      <p>Votes: {review.votes}</p>
+      <p>Votes: {review.votes} </p>
       <p>Comment Count: {review.comment_count}</p>
       <br />
       <br />
