@@ -10,7 +10,7 @@ const AllReviews = () => {
   useEffect(() => {
     if (category_slug) {
       fetch(
-        `https://fe-nc-games.herokuapp.com/api/reviews?category=${category_slug}`
+        `https://ncgames-adamtai.cyclic.app/api/reviews?category=${category_slug}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -18,7 +18,7 @@ const AllReviews = () => {
           setIsLoading(false);
         });
     } else {
-      fetch("https://fe-nc-games.herokuapp.com/api/reviews")
+      fetch("https://ncgames-adamtai.cyclic.app/api/reviews")
         .then((res) => res.json())
         .then((data) => {
           setReviews(data.reviews);
