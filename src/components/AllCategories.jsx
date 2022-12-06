@@ -5,7 +5,7 @@ const AllCategories = () => {
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("https://fe-nc-games.herokuapp.com/api/categories")
+    fetch("https://ncgames-adamtai.cyclic.app/api/categories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data.categories);

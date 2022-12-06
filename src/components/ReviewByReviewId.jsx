@@ -9,7 +9,7 @@ const ReviewByReviewId = () => {
   const { review_id } = useParams();
   const [voteCount, setVoteCount] = useState(0);
   useEffect(() => {
-    fetch(`https://fe-nc-games.herokuapp.com/api/reviews/${review_id}`)
+    fetch(`https://ncgames-adamtai.cyclic.app/api/reviews/${review_id}`)
       .then((res) => res.json())
       .then((data) => {
         setReview(data.review);
